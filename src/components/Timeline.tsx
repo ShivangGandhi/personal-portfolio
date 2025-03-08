@@ -1,17 +1,18 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBriefcase } from '@fortawesome/free-solid-svg-icons';
+import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons'; // Importing graduation cap icon
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import '../assets/styles/Timeline.scss';
 
 function Timeline() {
   return (
-    <div id="experience">
+    <div id="timeline">
       <div className="items-container">
-        <h1>Experience</h1>
+        <h1>Experience and Education Timeline</h1>
         <VerticalTimeline>
+
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="Jan 2024 - Aug 2024"
@@ -39,6 +40,17 @@ function Timeline() {
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="Sept 2022 - Dec 2023"
+            iconStyle={{ background: '#FF007F', color: 'rgb(39, 40, 34)' }} // Pink color
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+          >
+            <h3 className="vertical-timeline-element-title">Master of Applied Computer Science</h3>
+            <h4 className="vertical-timeline-element-subtitle">Dalhousie University, Halifax, NS, Canada</h4>
+            <p>GPA: 4.09/4.3</p>
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
             className="vertical-timeline-element--work"
             date="June 2021 - Dec 2021"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
@@ -63,6 +75,17 @@ function Timeline() {
               React, JavaScript, Node.js, Jenkins, Kibana, GCP (Cloud Functions, API Gateway, Pub/Sub), AWS (ECS, EKS)
             </p>
           </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--education"
+            date="Aug 2018 - May 2022"
+            iconStyle={{ background: '#FF007F', color: 'rgb(39, 40, 34)' }} // Pink color
+            icon={<FontAwesomeIcon icon={faGraduationCap} />}
+          >
+            <h3 className="vertical-timeline-element-title">Bachelor of Engineering - Information Technology</h3>
+            <h4 className="vertical-timeline-element-subtitle">Mumbai University, Mumbai, India</h4>
+            <p>CGPA: 9.56/10</p>
+          </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
     </div>
@@ -70,3 +93,4 @@ function Timeline() {
 }
 
 export default Timeline;
+

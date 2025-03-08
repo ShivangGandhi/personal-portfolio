@@ -18,7 +18,7 @@ import Toolbar from '@mui/material/Toolbar';
 
 const drawerWidth = 240;
 // const navItems = [['Skills', 'Skills'], ['Experience', 'experience'], ['Projects', 'projects'], ['Contact', 'contact']];
-const navItems = [['Skills', 'Skills'], ['Experience', 'experience'], ['Projects', 'projects']];
+const navItems = [['Skills', 'Skills'], ['Timeline', 'timeline'], ['Projects', 'projects']];
 
 
 function Navigation({ parentToChild, modeChange }: any) {
