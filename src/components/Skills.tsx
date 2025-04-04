@@ -1,29 +1,63 @@
 import React from "react";
 import '@fortawesome/free-regular-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faReact, faNodeJs, faAws, faPython } from '@fortawesome/free-brands-svg-icons';
+import {
+    faNodeJs,
+    faAws,
+    faAndroid,
+    faVuejs,
+} from '@fortawesome/free-brands-svg-icons';
+import { faDatabase, faTools, faCode } from '@fortawesome/free-solid-svg-icons';
 import Chip from '@mui/material/Chip';
 import '../assets/styles/Skills.scss';
 
-const frontendSkills = [
-    "React Native", "React.js", "TypeScript", "JavaScript (ES6+)", "Vue.js", "Redux", "Flutter (Dart)", "Tailwind CSS"
+const mobileFrameworks = [
+    "React Native", "Flutter", "Android SDK", "SwiftUI", "UIKit"
 ];
 
-const backendSkills = [
-    "Node.js", "GraphQL", "Express.js", "Laravel (PHP)", "Spring Boot (Java)", "RESTful APIs"
+const webFrameworks = [
+    "React", "Angular", "Vue.js",
+];
+
+const backendFrameworks = [
+    "Node.js", "Express.js", "Laravel", "Spring Boot", "Django", "RESTApi", "GraphQL"
+];
+
+const languages = [
+    "JavaScript", "TypeScript", "Dart", "Java", "Kotlin", "PHP", "Swift", "Python"
 ];
 
 const databaseSkills = [
-    "MySQL", "PostgreSQL", "MongoDB", "NoSQL"
+    "MySQL", "PostgreSQL", "MongoDB", "NoSQL", "Redis", "Firebase"
 ];
 
-const devOpsSkills = [
-    "GitHub Actions", "Firebase", "AWS", "GCP", "CDN", "Kubernetes", "CI/CD Pipelines"
+const devOpsCloudToolsSkills = [
+    "GitHub", "AWS", "GCP", "Docker", "Kubernetes", "CI/CD", "JIRA", "Sentry", "Twilio"
 ];
 
-const tools = [
-    "Git", "JIRA", "RESTful APIs", "UNIX/Linux", "sentry.io", "Kibana"
-];
+type SkillsSectionProps = {
+    icon: any;
+    title: string;
+    description: string;
+    items: string[];
+    label: string;
+};
+
+function SkillsSection({ icon, title, description, items, label }: SkillsSectionProps) {
+    return (
+        <div className="skill">
+            <FontAwesomeIcon icon={icon} size="3x" />
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <div className="flex-chips">
+                <span className="chip-title">{label}:</span>
+                {items.map((item, index) => (
+                    <Chip key={index} className='chip' label={item} />
+                ))}
+            </div>
+        </div>
+    );
+}
 
 function Skills() {
     return (
@@ -31,53 +65,48 @@ function Skills() {
             <div className="Skills-container">
                 <h1>Skills</h1>
                 <div className="Skills-grid">
-                    <div className="skill">
-                        <FontAwesomeIcon icon={faReact} size="3x" />
-                        <h3>Frontend Development</h3>
-                        <p>Experienced in building scalable, high-performance web and mobile applications using modern frontend technologies.</p>
-                        <div className="flex-chips">
-                            <span className="chip-title">Tech stack:</span>
-                            {frontendSkills.map((skill, index) => (
-                                <Chip key={index} className='chip' label={skill} />
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="skill">
-                        <FontAwesomeIcon icon={faNodeJs} size="3x" />
-                        <h3>Backend Development</h3>
-                        <p>Proficient in designing and developing RESTful APIs and backend systems using various frameworks and technologies.</p>
-                        <div className="flex-chips">
-                            <span className="chip-title">Tech stack:</span>
-                            {backendSkills.map((skill, index) => (
-                                <Chip key={index} className='chip' label={skill} />
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="skill">
-                        <FontAwesomeIcon icon={faAws} size="3x" />
-                        <h3>DevOps & Cloud</h3>
-                        <p>Experience in CI/CD pipelines, cloud deployments, and managing containerized applications with Kubernetes.</p>
-                        <div className="flex-chips">
-                            <span className="chip-title">Tech stack:</span>
-                            {devOpsSkills.map((skill, index) => (
-                                <Chip key={index} className='chip' label={skill} />
-                            ))}
-                        </div>
-                    </div>
-
-                    <div className="skill">
-                        <FontAwesomeIcon icon={faPython} size="3x" />
-                        <h3>Tools & Techniques</h3>
-                        <p>Familiar with various tools for software development, debugging, and performance monitoring.</p>
-                        <div className="flex-chips">
-                            <span className="chip-title">Tools:</span>
-                            {tools.map((tool, index) => (
-                                <Chip key={index} className='chip' label={tool} />
-                            ))}
-                        </div>
-                    </div>
+                    <SkillsSection
+                        icon={faAndroid}
+                        title="Mobile Development Frameworks"
+                        description="Skilled in cross-platform mobile app development with native and hybrid technologies."
+                        items={mobileFrameworks}
+                        label="Frameworks"
+                    />
+                    <SkillsSection
+                        icon={faVuejs}
+                        title="Web Development Frameworks"
+                        description="Experienced in crafting responsive and interactive web apps."
+                        items={webFrameworks}
+                        label="Frameworks"
+                    />
+                    <SkillsSection
+                        icon={faNodeJs}
+                        title="Backend Development Frameworks"
+                        description="Proficient in backend logic, API development, and server-side architectures."
+                        items={backendFrameworks}
+                        label="Frameworks"
+                    />
+                    <SkillsSection
+                        icon={faCode}
+                        title="Languages"
+                        description="Fluent in a wide array of programming languages across platforms."
+                        items={languages}
+                        label="Languages"
+                    />
+                    <SkillsSection
+                        icon={faDatabase}
+                        title="Databases"
+                        description="Hands-on experience with SQL and NoSQL database management systems."
+                        items={databaseSkills}
+                        label="Databases"
+                    />
+                    <SkillsSection
+                        icon={faAws}
+                        title="DevOps & Cloud"
+                        description="Deployment and monitoring experience using CI/CD, cloud, and containerization tools."
+                        items={devOpsCloudToolsSkills}
+                        label="Tools"
+                    />
                 </div>
             </div>
         </div>

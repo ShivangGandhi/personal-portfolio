@@ -21,9 +21,7 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Full Stack Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">UpBeing Inc., Halifax, NS, Canada</h4>
-            <p>
-              React Native, TypeScript, Laravel (PHP), PostgreSQL, Firebase, GCP, CI/CD, Kubernetes, Redux
-            </p>
+
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -34,9 +32,7 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Full Stack Developer Intern</h3>
             <h4 className="vertical-timeline-element-subtitle">UpBeing Inc., Halifax, NS, Canada</h4>
-            <p>
-              React Native, Next.js, TypeScript, Sentry.io, Firebase, PostgreSQL, GCP, CI/CD, Asana
-            </p>
+
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -58,9 +54,7 @@ function Timeline() {
           >
             <h3 className="vertical-timeline-element-title">Junior Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">iFreightbox Technologies</h4>
-            <p>
-              Flutter, Dart, Riverpod, Java Spring, SQL Server, GitLab, Redux, AWS
-            </p>
+
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
@@ -69,11 +63,9 @@ function Timeline() {
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
-            <h3 className="vertical-timeline-element-title">Full Stack Developer Intern</h3>
+            <h3 className="vertical-timeline-element-title">Full Stack Developer</h3>
             <h4 className="vertical-timeline-element-subtitle">Technocolabs</h4>
-            <p>
-              React, JavaScript, Node.js, Jenkins, Kibana, GCP (Cloud Functions, API Gateway, Pub/Sub), AWS (ECS, EKS)
-            </p>
+
           </VerticalTimelineElement>
 
           <VerticalTimelineElement
