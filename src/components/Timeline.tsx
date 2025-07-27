@@ -15,6 +15,28 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
+            date="May 2025 - Present"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Full Stack Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">Flair Airlines, Remote, Canada</h4>
+
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            date="Sept 2024 - Apr 2025"
+            iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
+            icon={<FontAwesomeIcon icon={faBriefcase} />}
+          >
+            <h3 className="vertical-timeline-element-title">Full Stack Developer Part Time</h3>
+            <h4 className="vertical-timeline-element-subtitle">Webcube, Remote</h4>
+
+          </VerticalTimelineElement>
+
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
             date="Jan 2024 - Aug 2024"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
@@ -48,7 +70,7 @@ function Timeline() {
 
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="June 2021 - Dec 2021"
+            date="May 2021 - Aug 2021"
             iconStyle={{ background: '#5000ca', color: 'rgb(39, 40, 34)' }}
             icon={<FontAwesomeIcon icon={faBriefcase} />}
           >
